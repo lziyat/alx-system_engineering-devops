@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -R -1 | grep -E '^\.\/|^$' | sed 's/:$//' | sed 's/^\.\///' | sed '/^\s*$/d'
+find . -type f -empty -exec ls -l {} \;
