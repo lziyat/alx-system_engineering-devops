@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -t | head -10
+ls -R -1 | grep -E '^\.\/|^$' | sed 's/:$//' | sed 's/^\.\///' | sed '/^\s*$/d'
